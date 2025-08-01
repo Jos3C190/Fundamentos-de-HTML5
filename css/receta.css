@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Variables CSS para colores */
+:root {
+    --primary-color: #8B4513; /* SaddleBrown */
+    --secondary-color: #D2691E; /* Chocolate */
+    --accent-color: #FF8C00; /* DarkOrange */
+    --text-color: #36454f; /* Charcoal */
+    --bg-color-light: #f8f5f2; /* Un beige muy suave */
+    --bg-color-dark: #eee;
+    --border-color: #e0e0e0;
+}
+
+/* Estilos para la página */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color-light);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-header-image {
+    width: 100%;
+    height: 180px; /* Altura fija para las imágenes de cabecera */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border-top-left-radius: 10px; /* Bordes redondeados en la parte superior */
+    border-top-right-radius: 10px;
+    margin-bottom: 20px; /* Espacio entre la imagen y el contenido de la tarjeta */
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 2.2em;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+    margin-top: 40px;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.6em;
+    margin-top: 30px;
+    color: var(--secondary-color);
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 1.05em;
+}
+
+ul, ol {
+    margin-bottom: 1.5em;
+    padding-left: 30px;
+    line-height: 1.8;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+ol li:first-child {
+    font-weight: 600;
+    color: var(--primary-color); /* Usar el color principal para destacar */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        margin: 15px;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    .section-header-image {
+        height: 120px; /* Ajuste de altura para móviles */
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+}
+
+.bon-appetit {
+    text-align: center;
+    font-size: 2.5em; /* Más grande para que destaque */
+    color: var(--primary-color); /* Usar el color principal */
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    background-color: #FFFACD; /* LemonChiffon para un fondo suave */
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+    display: block; /* Para que el padding y margin funcionen correctamente */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    margin-left: auto; /* Centrar con margen automático */
+    margin-right: auto; /* Centrar con margen automático */
+}
